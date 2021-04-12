@@ -1,19 +1,32 @@
 /* current year */
 let now = new Date();
 let cur_year = now.getFullYear();
-console.log(cur_year);
 document.querySelector('#year').innerHTML = cur_year;
 
 
 /*************** 
-CUSTOM SELECT sort
+CUSTOM SELECT
 ****************/
 let arr_selects = Array.from(document.querySelectorAll('.custom-select'));
 arr_selects.forEach(function(item, i, arr) {
     let btn = item.querySelector('button');
     let options = item.querySelector('.options');
-    btn.addEventListener('click', () => {
+
+    const toggleMenu = function() {
         options.style.display = (options.style.display == 'block') ? 'none' : 'block'
+    }
+
+    btn.addEventListener('click', () => {
+        toggleMenu();
+    });
+
+    document.addEventListener('click', function(e) {
+        const target = e.target;
+        const current_sel = target == item || item.contains(target);
+        const sel_is_opened = options.style.display == 'block';
+        if (!current_sel && sel_is_opened) {
+            toggleMenu();
+        }
     });
 
     let arr_radio = Array.from(item.querySelectorAll('input[type="radio"]'));
@@ -27,3 +40,8 @@ arr_selects.forEach(function(item, i, arr) {
         });
     });
 });
+
+/* show/hide element */
+function toggle(el){
+    el.style.display = (el.style.display == 'block') ? 'none' : 'block'
+}

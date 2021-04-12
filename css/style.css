@@ -122,14 +122,18 @@ header .icon {
 }
 
 
-.box {
+.box2 {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(22, 53, 97, 0.2);
+}
+
+.product {
   background: #FFFFFF;
   box-shadow: 4px 4px 15px rgba(22, 53, 97, 0.2);
 }
-
-.product img {
+.product>img {
   width: 100%;
-  height: 230px;
+  height: 280px;
   object-fit: scale-down;
 }
 .product .title {
@@ -145,11 +149,51 @@ header .icon {
   height: 2.4em;
   overflow: hidden;
 }
+@media (max-width: 1399px){
+  .product>img {height: 260px;}
+}
+@media (max-width: 1199px){
+  .product>img {height: 220px;}
+}
+@media (max-width: 575px){
+  .product>img {height: 43vw;}
+}
+
 
 /* left menu */
-.accordion-button::after {
-  background-image: url(../images/icons/next.svg);
+#left-menu a[data-bs-toggle="collapse"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+#left-menu a[data-bs-toggle="collapse"]>span {
+  flex: 1;
+}
+#left-menu a[data-bs-toggle="collapse"]>img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  transition: .2s;
+}
+#left-menu a[aria-expanded="true"]>img {
+  transform: rotate(90deg);
+}
+@media (max-width: 767px){
+  #left-menu {display: none;}
+}
+
+
+/* pagination */
+.page-link {
+  border: none;
+  font-weight: 700;
+  color: var(--color-1);
+}
+.page-link:hover {
+  background-color: rgb(var(--rgb-color-1)/70%);
+  color: #fff;
+}
+
 
 footer {
   background-color: var(--color-1);
