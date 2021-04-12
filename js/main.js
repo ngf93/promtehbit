@@ -23,6 +23,7 @@ arr_selects.forEach(function(item, i, arr) {
         }
         item.addEventListener('change', (event) => {
             btn.innerHTML = item.value;
+            options.style.display = 'none';
         });
     });
 });
