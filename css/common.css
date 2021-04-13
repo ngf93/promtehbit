@@ -13,22 +13,10 @@ body {
     body {font-size: 12px;}
 }
 
-
-@media (max-width: 1399px){}
-@media (max-width: 1199px){}
-@media (max-width: 991px){}
-@media (max-width: 767px){}
-@media (max-width: 575px){}
-
-
 a, a:hover, a:focus, a:active {
     color: inherit;
     outline: none;
     text-decoration: none;
-}
-.disable {
-    pointer-events: none;
-    cursor: default;
 }
 
 p, label, span, a, select, div, blockquote, cite, figure, figcaption, ul, ol, dl {
@@ -209,11 +197,9 @@ button:hover, button:focus, button:active {cursor: pointer;}
     color: #fff;
     padding: .4em 1em;
 }
-
-
-.btn_collapse::before {content: "Загрузить ещё";}
-.btn_collapse[aria-expanded="true"]::before {content: "Скрыть";}
-
+.btn_2:hover, .btn_2:focus, .btn_2:active {
+    box-shadow: 0px 4px 4px rgb(var(--rgb-color-1) / 20%);
+}
 
 
 /* TEXT STYLIZATION */
@@ -290,9 +276,6 @@ h2 {
 .f_20 {font-size: 2em;}
 .white {color:#fff;}
 .black {color: #000;}
-.color-1 {color: var(--color-1);}
-.color-2 {color: var(--color-2);}
-.color-3 {color: var(--color-3);}
 
 .fw_1 {font-weight: 100;} /* thin */
 .fw_2 {font-weight: 200;} /* extra-light */
@@ -306,11 +289,9 @@ h2 {
 .itlc {font-style: italic;}
 .norm {font-style: normal;}
 
-.td_und {text-decoration: underline;}
-.td_lth {text-decoration: line-through;}
 .lh_n {line-height: normal;}
 .bb_1 {border-bottom: 1px solid;}
-.t_ind {text-indent: 2rem;}
+
 
 
 ul.list {

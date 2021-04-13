@@ -124,12 +124,12 @@ header .icon {
 
 .box2 {
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(22, 53, 97, 0.2);
+  box-shadow: 0px 4px 4px rgb(var(--rgb-color-1) / 20%);
 }
 
 .product {
   background: #FFFFFF;
-  box-shadow: 4px 4px 15px rgba(22, 53, 97, 0.2);
+  box-shadow: 4px 4px 15px rgb(var(--rgb-color-1) / 20%);
 }
 .product>img {
   width: 100%;
